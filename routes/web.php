@@ -88,4 +88,15 @@ Route::group(['middleware' => ['auth']], function () {
     // //reportes
     // Route::get('amp_report_excel','MediumTermProgramingController@report_excel');
     // Route::get('acp_report_excel','ShortTermProgramingController@report_excel');
+
+
+
+/**PIPSPIE */
+Route::resource('planes/pgdes','PgdesStructureController');
+Route::post('planes/pgdes/delete','PgdesStructureController@delete')->name('pgdes.delete');
+
+
+
+
+
 });
