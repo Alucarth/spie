@@ -29,7 +29,7 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="{!!url('/img/logo_eba.png')!!}" alt="IMG">
+					<img src="{!!url('/img/NUEVO_LOGO_MPD_2021.png')!!}" alt="IMG">
 				</div>
                 @yield('content')
 				{{-- <form class="login100-form validate-form">

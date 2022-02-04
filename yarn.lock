@@ -1353,9 +1353,9 @@
   "version" "1.0.0"
 
 "bootstrap@^4.1.0", "bootstrap@^4.3.1":
-  "integrity" "sha512-rXqOmH1VilAt2DyPzluTi2blhk17bO7ef+zLLPlWvG494pDxcM234pJ8wTc/6R40UWizAIIMgxjvxZg5kmsbag=="
-  "resolved" "https://registry.npmjs.org/bootstrap/-/bootstrap-4.3.1.tgz"
-  "version" "4.3.1"
+  "integrity" "sha512-0dj+VgI9Ecom+rvvpNZ4MUZJz8dcX7WCX+eTID9+/8HgOkv3dsRzi8BGeZJCQU6flWQVYxwTQnEZFrmJSEO7og=="
+  "resolved" "https://registry.npmjs.org/bootstrap/-/bootstrap-4.6.1.tgz"
+  "version" "4.6.1"
 
 "brace-expansion@^1.1.7":
   "integrity" "sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA=="
@@ -2267,11 +2267,11 @@
     "assert-plus" "^1.0.0"
 
 "datatables.net-bs4@^1.10.15", "datatables.net-bs4@^1.10.16", "datatables.net-bs4@^1.10.19":
-  "integrity" "sha512-pgeP17w4aPR7HIxIwuJghfqXULjdg1K6xMUUKDyCERJRSNNK4MRToFfELtIsluLNN555YBK4Kx8nihX5/ZT1Fw=="
-  "resolved" "https://registry.npmjs.org/datatables.net-bs4/-/datatables.net-bs4-1.10.19.tgz"
-  "version" "1.10.19"
+  "integrity" "sha512-4V2uSxFloX1jRIsy4eAt1INyp5M5Pq5SV017/naq3zpVKraaFwqFjLhtkx64UHGXqcPj7egvj27dVcdnNIKnNA=="
+  "resolved" "https://registry.npmjs.org/datatables.net-bs4/-/datatables.net-bs4-1.11.4.tgz"
+  "version" "1.11.4"
   dependencies:
-    "datatables.net" "1.10.19"
+    "datatables.net" ">=1.11.3"
     "jquery" ">=1.7"
 
 "datatables.net-dt@^1.10.19":
@@ -2299,10 +2299,24 @@
     "datatables.net" "^1.10.15"
     "jquery" ">=1.7"
 
-"datatables.net@^1.10.15", "datatables.net@^1.10.16", "datatables.net@1.10.19":
+"datatables.net@^1.10.15", "datatables.net@1.10.19":
   "integrity" "sha512-+ljXcI6Pj3PTGy5pesp3E5Dr3x3AV45EZe0o1r0gKENN2gafBKXodVnk2ypKwl2tTmivjxbkiqoWnipTefyBTA=="
   "resolved" "https://registry.npmjs.org/datatables.net/-/datatables.net-1.10.19.tgz"
   "version" "1.10.19"
+  dependencies:
+    "jquery" ">=1.7"
+
+"datatables.net@^1.10.16":
+  "integrity" "sha512-z9LG4O0VYOYzp+rnArLExvnUWV8ikyWBcHYZEKDfVuz7BKxQdEq4a/tpO0Trbm+FL1+RY7UEIh+UcYNY/hwGxA=="
+  "resolved" "https://registry.npmjs.org/datatables.net/-/datatables.net-1.11.4.tgz"
+  "version" "1.11.4"
+  dependencies:
+    "jquery" ">=1.7"
+
+"datatables.net@>=1.11.3":
+  "integrity" "sha512-z9LG4O0VYOYzp+rnArLExvnUWV8ikyWBcHYZEKDfVuz7BKxQdEq4a/tpO0Trbm+FL1+RY7UEIh+UcYNY/hwGxA=="
+  "resolved" "https://registry.npmjs.org/datatables.net/-/datatables.net-1.11.4.tgz"
+  "version" "1.11.4"
   dependencies:
     "jquery" ">=1.7"
 
@@ -2968,6 +2982,7 @@
     "schema-utils" "^1.0.0"
 
 "file-saver@github:eligrey/FileSaver.js#1.3.8":
+  "integrity" "sha512-ZEXfED6prHm69SJJ8LrGISfsrAjpHoxWlCI2eYeJQg3njRA55/9cKp6MrsQsuQEhBv/7Qlp0SSMHjyOYbxUkiw=="
   "resolved" "git+ssh://git@github.com/eligrey/FileSaver.js.git#e865e37af9f9947ddcced76b549e27dc45c1cb2e"
   "version" "1.3.8"
 
@@ -3286,9 +3301,9 @@
     "glob" "^7.1.1"
 
 "graceful-fs@^4.1.11", "graceful-fs@^4.1.15", "graceful-fs@^4.1.2", "graceful-fs@^4.1.6":
-  "integrity" "sha512-6uHUhOPEBgQ24HM+r6b/QwWfZq+yiFcipKFrOFiBEnWdy5sdzYoi+pJeQaPI5qOLRFqWmAXUPQNsielzdLoecA=="
-  "resolved" "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.1.15.tgz"
-  "version" "4.1.15"
+  "integrity" "sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ=="
+  "resolved" "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.9.tgz"
+  "version" "4.2.9"
 
 "growly@^1.3.0":
   "integrity" "sha1-8QdIy+dq+WS3yWyTxrzCivEgwIE="
@@ -3976,14 +3991,16 @@
   "version" "0.1.2"
 
 "jquery-ui@^1.12.1":
-  "integrity" "sha1-vLQEXI3QU5wTS8FIjN0+dop6nlE="
-  "resolved" "https://registry.npmjs.org/jquery-ui/-/jquery-ui-1.12.1.tgz"
-  "version" "1.12.1"
+  "integrity" "sha512-2VlU59N5P4HaumDK1Z3XEVjSvegFbEOQRgpHUBaB2Ak98Axl3hFhJ6RFcNQNuk9SfL6WxIbuLst8dW/U56NSiA=="
+  "resolved" "https://registry.npmjs.org/jquery-ui/-/jquery-ui-1.13.1.tgz"
+  "version" "1.13.1"
+  dependencies:
+    "jquery" ">=1.8.0 <4.0.0"
 
-"jquery@^3.1.1", "jquery@^3.3.1", "jquery@^3.4", "jquery@>=1.12.0", "jquery@>=1.7", "jquery@1.9.1 - 3", "jquery@2 - 3":
-  "integrity" "sha512-ggRCXln9zEqv6OqAGXFEcshF5dSBvCkzj6Gm2gzuR5fWawaX8t7cxKVkkygKODrDAzKdoYw3l/e3pm3vlT4IbQ=="
-  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.4.0.tgz"
-  "version" "3.4.0"
+"jquery@^3.1.1", "jquery@^3.3.1", "jquery@^3.4", "jquery@>=1.12.0", "jquery@>=1.7", "jquery@>=1.8.0 <4.0.0", "jquery@1.9.1 - 3", "jquery@2 - 3":
+  "integrity" "sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw=="
+  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz"
+  "version" "3.6.0"
 
 "js-levenshtein@^1.1.3":
   "integrity" "sha512-X2BB11YZtrRqY4EnQcLX5Rh373zbK4alC1FW7D7MBhL2gtcC17cTnr6DmfHZeS0s2rTHjUTMMHfG7gO8SSdw+g=="
@@ -5195,10 +5212,10 @@
   dependencies:
     "find-up" "^3.0.0"
 
-"popper.js@^1.12", "popper.js@^1.14.3", "popper.js@^1.14.7":
-  "integrity" "sha512-AGwHGQBKumlk/MDfrSOf0JHhJCImdDMcGNoqKmKkU+68GFazv3CQ6q9r7Ja1sKDZmYWTckY/uLyEznheTDycnA=="
-  "resolved" "https://registry.npmjs.org/popper.js/-/popper.js-1.14.6.tgz"
-  "version" "1.14.6"
+"popper.js@^1.12", "popper.js@^1.14.3", "popper.js@^1.16.1":
+  "integrity" "sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ=="
+  "resolved" "https://registry.npmjs.org/popper.js/-/popper.js-1.16.1.tgz"
+  "version" "1.16.1"
 
 "portfinder@^1.0.9":
   "integrity" "sha512-Yxe4mTyDzTd59PZJY4ojZR8F+E5e97iq2ZOHPz3HDgSvYC5siNad2tLooQ5y5QHyQhc3xVqvyk/eNA3wuoa7Sw=="
@@ -6626,9 +6643,9 @@
     "promise-polyfill" "^6.0.2"
 
 "sweetalert2@^8.2.6":
-  "integrity" "sha512-F14KlRBBJr7Hl+WWCYnBZR8heUNTBQY9nfhNWlrocnj5equ7lkWZC8BfxHXX699D8tb/LrHaEWtpIhWVMgoacA=="
-  "resolved" "https://registry.npmjs.org/sweetalert2/-/sweetalert2-8.2.6.tgz"
-  "version" "8.2.6"
+  "integrity" "sha512-nFL++N3bitkEkd487Tv4i5ZxusmnoAAXHjtk7lp603Opxb8wlvVnz3hqa7qiIw6QFL04JC810E6qVQNf8s0vYQ=="
+  "resolved" "https://registry.npmjs.org/sweetalert2/-/sweetalert2-8.19.0.tgz"
+  "version" "8.19.0"
 
 "switchery@^0.0.2":
   "integrity" "sha1-jVIsTrMli6zGyRvsmA4ORuMS0G4="
@@ -7314,9 +7331,9 @@
   "version" "4.0.0"
 
 "xtend@^4.0.0", "xtend@~4.0.1":
-  "integrity" "sha1-pcbVMr5lbiPbgg77lDofBJmNY68="
-  "resolved" "https://registry.npmjs.org/xtend/-/xtend-4.0.1.tgz"
-  "version" "4.0.1"
+  "integrity" "sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ=="
+  "resolved" "https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz"
+  "version" "4.0.2"
 
 "y18n@^3.2.1", "y18n@^3.2.1 || ^4.0.0":
   "integrity" "sha1-bRX7qITAhnnA136I53WegR4H+kE="
