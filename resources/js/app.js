@@ -118,6 +118,7 @@ Vue.component('report-component', require('./components/ReportComponent.vue').de
 Vue.component('chart-component', require('./components/chartComponent.vue').default);
 Vue.component('programatic-component', require('./components/ProgramaticStructure.vue').default);
 Vue.component('pgdes-component', require('./components/PgdesStructure.vue').default);
+Vue.component('role-component', require('./components/RoleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

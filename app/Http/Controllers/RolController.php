@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Rol;
 use Illuminate\Http\Request;
-
+use Spatie\Permission\Models\Role;
 class RolController extends Controller
 {
     /**
@@ -40,7 +40,12 @@ class RolController extends Controller
     public function store(Request $request)
     {
         //
-        return "grabando un nuevo rol";
+        $role = new Rol;
+        $role->name = $request->name;
+        $role->guard_name = 'web';
+        $role->save();
+
+        return redirect("roles");
     }
 
     /**
@@ -52,7 +57,12 @@ class RolController extends Controller
     public function show($id)
     {
         //
-        return "msssostrando rol: ".$id;
+        $role = Rol::find($id);
+        if($role)
+        {
+            return response()->json($role);
+        }
+        return "no se encontrol el rol: ".$id;
     }
 
     /**
@@ -87,5 +97,13 @@ class RolController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function delete(Request $request)
+    {
+        $structure_programmatic = Rol::find($request->id);
+        $structure_programmatic->delete();
+        session()->flash('delete','se elimino la estructura');
+        return back()->withInput();
     }
 }

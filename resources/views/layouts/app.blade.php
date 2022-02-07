@@ -105,7 +105,8 @@
         <aside class="main-sidebar elevation-4 sidebar-dark-primary">
             <!-- Brand Logo -->
             <a href="#" class="brand-link ">
-                <img src="{!!url('/img/logo_eba_blanck.png')!!}" alt="Eba Logo" class="brand-image " style="opacity: .8; margin-left: 0.2rem">
+                {{-- <img src="{!!url('/img/NUEVO_LOGO_H_2021_BLANCO.png.png')!!}" alt="Eba Logo" class="brand-image " style="opacity: .8; margin-left: 0.2rem"> --}}
+                MPD
                 <span class="brand-text font-weight-light">{{ config('app.name', 'Laravel') }}</span>
             </a>
 
@@ -184,11 +185,11 @@
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>PDES</p>
                                   </a>
-                                </li>                                
+                                </li>
                               </ul>
                         </li>
 
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{ url('programatic_structure') }}" class="nav-link">
                                 <i class="nav-icon fas fa-sitemap"></i>
                                 <p>
@@ -207,7 +208,7 @@
                         <li class="nav-item">
                             <a href="{{ url('/') }}" class="nav-link">
                                 <i class="nav-icon far fa-calendar-alt"></i>
-                                {{-- <i class=" nav-icon material-icons" height="42px" width="42px"> event_note </i> --}}
+
                                 <p>
                                     Tareas
                                 </p>
@@ -216,7 +217,7 @@
                         <li class="nav-item">
                             <a href="{{ url('execution_specific_tasks') }}" class="nav-link">
                                 <i class="nav-icon fas fa-calendar-day"></i>
-                                {{-- <i class=" nav-icon material-icons"> event_available </i> --}}
+
                                 <p>
                                     Tareas Especificas
                                 </p>
@@ -245,7 +246,7 @@
                                     Configuracion
                                 </p>
                             </a>
-                        </li>
+                        </li> --}}
 
                     </ul>
                 </nav>

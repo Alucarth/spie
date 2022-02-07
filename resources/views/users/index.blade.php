@@ -10,7 +10,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header card-calendar"> 
+                <div class="card-header card-calendar">
                     <h4 class="card-title ">
                         {{$title??''}}
                         <small class="float-sm-right">
@@ -35,18 +35,18 @@
                                 <td>{{$user->username}}</td>
                                 <td>{{$user->name}}</td>
                                 <td>{{$user->email}}</td>
-                                <td> 
+                                <td>
                                     <a href="{{url('users/'.$user->id)}}" ><i class="material-icons text-info">remove_red_eye</i> </a>
                                     <a href="{{url('users/'.$user->id.'/edit')}}" ><i class="material-icons text-primary">edit</i></a>
                                     <a href="#" ><i class="material-icons text-danger">delete</i></i></a>
                                 </td>
-                            </tr>  
+                            </tr>
                             @endforeach
                             </tbody>
-                        
-                    </table> 
 
-          
+                    </table>
+
+
                 </div>
             </div>
         </div>
@@ -63,7 +63,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    
+
                     <div class="row">
                         <div class="form-group  col-md-12">
                             {!! Form::label('full_name', 'Nombre')!!}
@@ -88,7 +88,7 @@
                         </div>
 
                     </div>
-              
+
                     <div class="row">
                         <div class="form-group  col-md-6">
                             {!! Form::label('rol', 'Roles')!!}
@@ -96,9 +96,9 @@
                                 @foreach ($roles as $role)
                                 <li class="list-group-item ">{{$role->name}} <small class="float-sm-right"><input type="checkbox" class="js-switch" name='roles[]' value="{{$role->name}}" /></small>  </li>
                                 @endforeach
-                                
+
                             </ul>
-                            
+
                             {{-- {!! Form::select('rol_id', $roles,null,['class'=>'custom-select'])!!} --}}
                         </div>
                     </div>
@@ -111,12 +111,12 @@
             </div>
         </div>
     </div>
-    
+
 </div>
 @endsection
 <script>
 @section('script')
-	
+
     $('#users_table').DataTable();
     var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
 
@@ -125,6 +125,6 @@
     });
     // var elem =document.querySelector('.js-switch');
     // var init = new Switchery(elem, { size: 'small' });
-          
+
 @endsection
-</script>    
+</script>
