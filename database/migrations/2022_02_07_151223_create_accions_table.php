@@ -17,9 +17,12 @@ class CreateAccionsTable extends Migration
             $table->increments('id');
             $table->string("codigo");
             $table->string("descripcion");
-            $table->timestamps();
             $table->unsignedInteger('resultado_id');
             $table->foreign('resultado_id')->references('id')->on('resultados');
+            $table->unsignedInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->timestamps();
+
         });
     }
 
