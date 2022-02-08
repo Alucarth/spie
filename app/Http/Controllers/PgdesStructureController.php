@@ -14,8 +14,9 @@ class PgdesStructureController extends Controller
     {
         //
         $pgdes = PgdesStructure::all();
+        $niveles = array('Ejes', 'Metas', 'Resultados', 'Acciones');
         // return $programatic_structures;
-        return view('planes.pgdes.index',compact('pgdes'));
+        return view('planes.pgdes.index',compact('pgdes','niveles'));
     }
 
     public function show($id)

@@ -95,9 +95,28 @@ Route::group(['middleware' => ['auth']], function () {
 /**PIPSPIE */
 Route::resource('planes/pgdes','PgdesStructureController');
 Route::post('planes/pgdes/delete','PgdesStructureController@delete')->name('pgdes.delete');
+Route::get('planes/pdesNiveles/{nivel}','PdesStructureController@niveles')->name('pdes.niveles');
 
 
 
 
+
+
+// Route::get('planes/pdes','EjeController@index')->name('pdes.ejes');
+Route::resource('pdes/ejes','EjeController');
+
+Route::get('planes/pdes/metas/{filtro}','MetaController@index')->name('pdes.meta');
+Route::resource('pdes/metas','MetaController');
+
+
+
+Route::get('planes/pdes/resultados/{meta}','ResultadoController@index')->name('pdes.resultado');
+Route::resource('pdes/resultados','ResultadoController');
+
+Route::get('planes/pdes/acciones/{resultado}','AccionController@index')->name('pdes.accion');
+Route::resource('pdes/acciones','AccionController');
+
+Route::get('planes/pdes/indicadores/{accion}','IndicadorController@index')->name('pdes.accion');
+Route::resource('pdes/indicadores','IndicadorController');
 
 });

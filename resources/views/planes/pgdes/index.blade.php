@@ -31,7 +31,6 @@
                         <table id="programatic_list" class="table table-hover table-bordered dt-responsive nowrap" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Id</th>
                                     <th>Codigo</th>
                                     <th>Nombre</th>
                                     <th>Acciones</th>
@@ -41,7 +40,6 @@
                             <tbody>
                                 @foreach ($pgdes as $item)
                                 <tr>
-                                    <td>{{$item->id}}</td>
                                     <td>{{$item->code}}</td>
                                     <td>{{$item->description}}</td>
                                     <td>
