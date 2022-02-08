@@ -16,10 +16,13 @@ class CreateMetasTable extends Migration
         Schema::create('metas', function (Blueprint $table) {
             $table->increments('id');
             $table->string("codigo");
-            $table->string("descripcion");
+            $table->longText("descripcion");
 
             $table->unsignedInteger('eje_id');
             $table->foreign('eje_id')->references('id')->on('ejes');
+            $table->unsignedInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+
             $table->timestamps();
         });
     }

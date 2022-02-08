@@ -14,7 +14,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         //
-        Commands\ImportDB::class
+        Commands\ImportDB::class,
+        Commands\ImportEjes::class
     ];
 
     /**

@@ -16,7 +16,7 @@ class CreateAccionsTable extends Migration
         Schema::create('acciones', function (Blueprint $table) {
             $table->increments('id');
             $table->string("codigo");
-            $table->string("descripcion");
+            $table->longText("descripcion");
             $table->unsignedInteger('resultado_id');
             $table->foreign('resultado_id')->references('id')->on('resultados');
             $table->unsignedInteger('user_id');

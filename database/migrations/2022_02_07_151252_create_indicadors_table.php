@@ -17,9 +17,9 @@ class CreateIndicadorsTable extends Migration
             $table->increments('id');
 
             $table->string("codigo");
-            $table->string("descripcion");
-            $table->string ("linea_base_unidad");
-            $table->string ("linea_base_valor");
+            $table->longText("descripcion");
+            $table->longText ("linea_base_unidad");
+            $table->longText ("linea_base_valor");
 
             $table->unsignedInteger('accion_id');
             $table->foreign('accion_id')->references('id')->on('acciones');
