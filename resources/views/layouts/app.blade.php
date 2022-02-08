@@ -181,7 +181,7 @@
                                   </a>
                                 </li>
                                 <li class="nav-item">
-                                  <a href="{{ url('programatic_structure') }}" class="nav-link">
+                                  <a href="{{ url('pdes/ejes') }}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>PDES</p>
                                   </a>
@@ -204,8 +204,8 @@
                                     Planificacion
                                 </p>
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </li> --}}
+                        {{-- <li class="nav-item">
                             <a href="{{ url('/') }}" class="nav-link">
                                 <i class="nav-icon far fa-calendar-alt"></i>
 
@@ -262,10 +262,10 @@
             <section class="content-header "style=" padding-top: 60px;">
                 <div class="container-fluid">
                     <div class="row mb-2">
-                        <div class="col-sm-6">
+                        <div class="col-sm-12">
                             <h1> @yield('title')</h1>
                         </div>
-                        <nav class="col-sm-6" aria-label="breadcrumb">
+                        <nav class="col-sm-12" aria-label="breadcrumb">
                             <ol class="breadcrumb float-sm-right">
 								@yield('breadcrums')
                                 {{-- <li class="breadcrumb-item"><a href="#">Home</a></li>
