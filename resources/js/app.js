@@ -119,6 +119,8 @@ Vue.component('chart-component', require('./components/chartComponent.vue').defa
 Vue.component('programatic-component', require('./components/ProgramaticStructure.vue').default);
 Vue.component('pgdes-component', require('./components/PgdesStructure.vue').default);
 Vue.component('role-component', require('./components/RoleComponent.vue').default);
+Vue.component('pdes-form-component', require('./components/PdesForm.vue').default);
+Vue.component('indicador-form-component', require('./components/IndicadorForm.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
