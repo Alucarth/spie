@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAccionsTable extends Migration
+class CreateFormularioEndidadsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,15 @@ class CreateAccionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('acciones', function (Blueprint $table) {
+        Schema::create('formulario_endidades', function (Blueprint $table) {
             $table->increments('id');
-            $table->string("codigo");
-            $table->longText("descripcion");
-            $table->unsignedInteger('resultado_id');
-            $table->foreign('resultado_id')->references('id')->on('resultados');
+
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->unsignedInteger('tipo_accion_id');
-            $table->foreign('tipo_accion_id')->references('id')->on('tipo_acciones');
+            $table->unsignedInteger('formulario_id');
+            $table->foreign('formulario_id')->references('id')->on('formularios');
+            $table->unsignedInteger('entidad_id');
+            $table->foreign('entidad_id')->references('id')->on('entidades');
             $table->timestamps();
 
         });
@@ -35,6 +34,6 @@ class CreateAccionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('accions');
+        Schema::dropIfExists('formulario_endidads');
     }
 }
