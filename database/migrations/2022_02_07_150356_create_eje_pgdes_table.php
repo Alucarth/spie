@@ -15,6 +15,13 @@ class CreateEjePgdesTable extends Migration
     {
         Schema::create('eje_pgdes', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->unsignedInteger('eje_id');
+            $table->foreign('eje_id')->references('id')->on('ejes');
+
+            $table->unsignedInteger('pgdes_structure_id');
+            $table->foreign('pgdes_structure_id')->references('id')->on('pgdes_structures');
+
             $table->timestamps();
         });
     }
