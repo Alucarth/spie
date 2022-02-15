@@ -13,7 +13,7 @@ class CreateFormularioEndidadsTable extends Migration
      */
     public function up()
     {
-        Schema::create('formulario_endidades', function (Blueprint $table) {
+        Schema::create('formulario_entidades', function (Blueprint $table) {
             $table->increments('id');
 
             $table->unsignedInteger('user_id');

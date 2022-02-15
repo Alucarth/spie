@@ -43,6 +43,6 @@ class CreatePlanInstitucionalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('plan_institucionals');
+        Schema::dropIfExists('plan_institucional');
     }
 }

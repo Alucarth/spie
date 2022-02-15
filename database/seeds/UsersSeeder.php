@@ -36,8 +36,8 @@ class UsersSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'username' =>  'Leandro David',
-            'name' =>  'Claudia A. Flores',
+            'username' =>  'david.torrez',
+            'name' =>  'Leandro David Torrez Salinas',
             // 'email' => 'admin@gmail.com',
             'password' => bcrypt('123456'),
         ]);
@@ -52,7 +52,7 @@ class UsersSeeder extends Seeder
         $user = User::find(3);
         $user->assignRole('Admin');
 
-        $user = User::find(3);
+        $user = User::find(4);
         $user->assignRole('Planificador');
 
 

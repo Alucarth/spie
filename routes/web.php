@@ -129,7 +129,8 @@ Route::resource('pdes/indicadores','IndicadorController');
 Route::get('planificacion','PlanificacionController@index')->name('planificacion.index');
 Route::get('planificacion/planinstitucional/{formularioEntidad}','PlanificacionController@planAcciones')->name('planificacion.acciones');
 
-
+// Route::get('formulario_matriz/{accion_id}','FormularioController@formulario_accion')->name('formulario_accion');
+Route::resource('plan_institucional','PlanInstitucionalController');
 
 
 
