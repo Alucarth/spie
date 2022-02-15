@@ -13,7 +13,7 @@ class CreateFormularioEndidadsTable extends Migration
      */
     public function up()
     {
-        Schema::create('formulario_entidades', function (Blueprint $table) {
+        Schema::create('formulario_endidades', function (Blueprint $table) {
             $table->increments('id');
 
             $table->unsignedInteger('user_id');
@@ -22,9 +22,6 @@ class CreateFormularioEndidadsTable extends Migration
             $table->foreign('formulario_id')->references('id')->on('formularios');
             $table->unsignedInteger('entidad_id');
             $table->foreign('entidad_id')->references('id')->on('entidades');
-            $table->integer('year_inicial');
-            $table->integer('year_final');
-            $table->string('estado');
             $table->timestamps();
 
         });
