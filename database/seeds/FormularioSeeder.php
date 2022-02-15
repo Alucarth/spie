@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\Formulario;
+use App\Formulario;
+use PhpParser\Node\Expr\Cast\Array_;
+
 class FormularioSeeder extends Seeder
 {
     /**
@@ -23,7 +25,7 @@ class FormularioSeeder extends Seeder
         ];
         foreach($formularios as $form)
         {
-           $formulario = Formulario::create(array $form);
+           Formulario::create($form);
         }
     }
 }
