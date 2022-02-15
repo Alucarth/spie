@@ -26,6 +26,7 @@ class EjeImport implements ToModel, WithHeadingRow
             $eje = new Eje;
             $eje->codigo = $row['codeje'];
             $eje->descripcion = $row['desc_eje'];
+            $eje->user_id = 1;
             $eje->save();
         }
 
@@ -72,6 +73,7 @@ class EjeImport implements ToModel, WithHeadingRow
                 $accion->descripcion = $row['desc_acc'];
                 $accion->resultado_id = $resultado->id;
                 $accion->user_id = 1;
+                $accion->tipo_accion_id =1;
                 $accion->save();
 
             }
