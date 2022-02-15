@@ -21,6 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('path_avatar')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->unsignedInteger('entidad_id')->nullable();//deberia estar en ambos casos 
+            $table->foreign('entidad_id')->references('id')->on('entidades');
             $table->rememberToken();
             $table->timestamps();
         });

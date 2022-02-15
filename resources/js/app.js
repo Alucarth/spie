@@ -121,6 +121,7 @@ Vue.component('pgdes-component', require('./components/PgdesStructure.vue').defa
 Vue.component('role-component', require('./components/RoleComponent.vue').default);
 Vue.component('pdes-form-component', require('./components/PdesForm.vue').default);
 Vue.component('indicador-form-component', require('./components/IndicadorForm.vue').default);
+Vue.component('plani-form-component', require('./components/PlaniForm.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

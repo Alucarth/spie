@@ -35,6 +35,13 @@ class ResultadoController extends Controller
         return view('planes.pdes.resultados',compact('estructura','niveles','padre'));
     }
 
+    public function getFiltro($filtro)
+    {
+        //
+        $resultados = Accion::where('meta_id',$filtro)->get();
+        return response()->json($resultados);
+    }
+
     public function show($id)
     {
         //
