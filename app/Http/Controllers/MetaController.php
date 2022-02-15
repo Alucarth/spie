@@ -41,6 +41,13 @@ class MetaController extends Controller
         return view('planes.pdes.metas',compact('estructura','niveles','padre'));
     }
 
+    public function getFiltro($filtro)
+    {
+        //
+        $metas = Meta::where('eje_id',$filtro)->get();
+        return response()->json($metas);
+    }
+
     public function show($id)
     {
         //

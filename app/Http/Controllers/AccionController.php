@@ -17,10 +17,6 @@ class AccionController extends Controller
          //
          // $pgdes = PgdesStructure::all();
          
-         
- 
-         
- 
          if($filtro == 'todo'){
              $estructura = Accion::all();
              $padre = [];
@@ -39,6 +35,20 @@ class AccionController extends Controller
         ];
  
          return view('planes.pdes.acciones',compact('estructura','niveles','padre'));
+     }
+
+     public function getFiltro($filtro)
+     {
+         //
+         $acciones = Accion::where('resultado_id',$filtro)->get();
+         return response()->json($acciones);
+     }
+
+     public function getAll()
+     {
+         //
+         $acciones = Accion::all();
+         return response()->json($acciones);
      }
  
      public function show($id)

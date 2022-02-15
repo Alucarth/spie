@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEntidadsTable extends Migration
+class CreateEntidadesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,11 +15,14 @@ class CreateEntidadsTable extends Migration
     {
         Schema::create('entidades', function (Blueprint $table) {
             $table->increments('id');
-            $table->string("codigo");
-            $table->string("descripcion");
+            $table->integer("codigo")->nullable();
+            $table->string("denominacion");
+            $table->string("sigla")->nullable();
+            $table->string("clasificador")->nullable();
+            $table->integer("codigo_padre")->nullable();
             $table->timestamps();
-            $table->unsignedInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            // $table->unsignedInteger('user_id');
+            // $table->foreign('user_id')->references('id')->on('users');
 
         });
     }
@@ -31,6 +34,6 @@ class CreateEntidadsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('entidads');
+        Schema::dropIfExists('entidades');
     }
 }

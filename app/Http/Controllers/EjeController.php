@@ -24,6 +24,13 @@ class EjeController extends Controller
         return view('planes.pdes.ejes',compact('estructura','niveles'));
     }
 
+    public function getAll()
+    {
+        //
+        $ejes = Eje::all();
+        return response()->json($ejes);
+    }
+
     public function show($id)
     {
         //

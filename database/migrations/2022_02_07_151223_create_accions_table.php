@@ -23,6 +23,8 @@ class CreateAccionsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedInteger('tipo_accion_id');
             $table->foreign('tipo_accion_id')->references('id')->on('tipo_acciones');
+            $table->unsignedInteger('entidad_id')->nullable();//deberia estar en ambos casos 
+            $table->foreign('entidad_id')->references('id')->on('entidades');
             $table->timestamps();
 
         });
