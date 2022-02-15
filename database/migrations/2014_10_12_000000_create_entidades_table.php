@@ -15,11 +15,11 @@ class CreateEntidadesTable extends Migration
     {
         Schema::create('entidades', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer("codigo")->nullable();
-            $table->string("denominacion");
-            $table->string("sigla")->nullable();
+            $table->string("codigo")->nullable();
+            $table->string("descripcion");
+            $table->string("sigla");
             $table->string("clasificador")->nullable();
-            $table->integer("codigo_padre")->nullable();
+            $table->string("codigo_padre")->nullable();
             $table->timestamps();
             // $table->unsignedInteger('user_id');
             // $table->foreign('user_id')->references('id')->on('users');

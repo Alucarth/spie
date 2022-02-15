@@ -32,13 +32,13 @@
                             <li class="nav-item" >
                                 {{-- <a href="{{url($item['ruta'])}}" class="nav-link"> --}}
                                 <a href="#" class="nav-link">
-                                    
+
                                 @if ($item['active']==true)
                                     <i class="fa fa-folder-open text-info"></i>
                                 @else
                                     <i class="fa fa-folder text-warning"></i>
-                                @endif 
-                                 {{ $item['nombre']  }} 
+                                @endif
+                                 {{ $item['nombre']  }}
                                  {{-- <span class="float-right badge bg-success"> <i class="fa fa-flag"></i> </span> --}}
                                 </a>
                             </li>
@@ -59,20 +59,20 @@
 
                             <h4 class="card-title ">
                                 {{$title??'Ejes'}}
-                                <small class="float-sm-right">                                
+                                <small class="float-sm-right">
                                     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ModalStructure" data-json="null" > Nuevo  <i class="fa fa-plus-circle"></i> </button>
                                 </small>
                             </h4>
 
                         </h3>
                     </div>
-                    <div class="card-body">                        
+                    <div class="card-body">
                         <div class="table-responsive-md">
                             <table id="lista" class="table table-responsive table-bordered table-hover" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th scope="col-1">Cod.</th>
-                                        <th scope="col-5">Descripción</th>                                        
+                                        <th scope="col-5">Descripción</th>
                                         <th scope="col-1">Opciones</th>
                                     </tr>
                                 </thead>
