@@ -189,6 +189,14 @@
                                 </li>
                               </ul>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ url('entidades/asignacionFormularios') }}" class="nav-link">
+                                <i class="nav-icon fas fa-sitemap"></i>
+                                <p>
+                                    Asignacion Formulario                                    
+                                </p>
+                            </a>
+                        </li>
                         @endhasrole
                         @hasrole('SuperUsuario')
                         <li class="nav-item">
@@ -201,7 +209,7 @@
                         </li>
                         @endhasrole
 
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{ url('programatic_structure') }}" class="nav-link">
                                 <i class="nav-icon fas fa-sitemap"></i>
                                 <p>
@@ -216,7 +224,7 @@
                                     Planificacion
                                 </p>
                             </a>
-                        </li>
+                        </li> --}}
                         {{-- <li class="nav-item">
                             <a href="{{ url('/') }}" class="nav-link">
                                 <i class="nav-icon far fa-calendar-alt"></i>

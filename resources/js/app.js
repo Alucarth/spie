@@ -124,6 +124,7 @@ Vue.component('indicador-form-component', require('./components/IndicadorForm.vu
 Vue.component('plani-form-component', require('./components/PlaniForm.vue').default);
 
 Vue.component('plan-institucional', require('./components/PlanInstitucional.vue').default);
+Vue.component('asignacion-formulario-component', require('./components/AsignacionFormulario.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

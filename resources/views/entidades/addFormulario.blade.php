@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    Planificación
+    PGDES
 @endsection
 @section('breadcrums')
     {{-- {{ Breadcrumbs::render('action_short_term_year',$year) }} --}}
@@ -16,12 +16,13 @@
                         <h3 class="card-title">
 
                             <h4 class="card-title ">
-                                {{$title??'Formularios Activos'}}
+                                {{$title??''}}
                                 <small class="float-sm-right">
                                     {{-- <a href="{{url('amp_report_excel')}}" class="btn btn-success btn-sm"><i class="fa fa-file-excel-o"></i> </a>  --}}
-                                    {{-- <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ProgramaticModal" data-json="null" > Nuevo  <i class="fa fa-plus-circle"></i> </button> --}}
+                                    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ProgramaticModal" data-json="null" > Nuevo  <i class="fa fa-plus-circle"></i> </button>
                                 </small>
                             </h4>
+
                         </h3>
                     </div>
                     <div class="card-body">
@@ -31,24 +32,22 @@
                             <thead>
                                 <tr>
                                     <th>Codigo</th>
-                                    <th>Denominacion</th>
-                                    <th>Plan</th>
-                                    <th>Estado</th>
+                                    <th>Nombre</th>
+                                    <th>Formulario</th>
                                     <th>Acciones</th>
 
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($data as $item)
+                                @foreach ($formularios as $item)
                                 <tr>
                                     <td>{{$item->entidad->codigo}}</td>
                                     <td>{{$item->entidad->descripcion}}</td>
                                     <td>{{$item->formulario->sigla}}</td>
-                                    <td>{{$item->estado}}</td>
                                     <td>
-                                        <a href="{{url('planificacion/planinstitucional/'.$item->id)}}"><i class="material-icons text-warning">folder</i></a>
-                                        {{-- <a href="#" data-toggle="modal" data-target="#ProgramaticModal" data-backdrop="static" data-keyboard="false" data-json="{{$item}}"><i class="material-icons text-primary">edit</i></a>
-                                        <a href="#" data-toggle="modal" data-target="#deleteModal" data-backdrop="static" data-keyboard="false" data-json="{{$item}}"><i class="material-icons text-danger">delete</i></a> --}}
+                                        {{-- <a href="{{url('ast_operations/'.$item->id)}}"><i class="material-icons text-warning">folder</i></a> --}}
+                                        <a href="#" data-toggle="modal" data-target="#ProgramaticModal" data-backdrop="static" data-keyboard="false" data-json="{{$item}}"><i class="material-icons text-primary">edit</i></a>
+                                        <a href="#" data-toggle="modal" data-target="#deleteModal" data-backdrop="static" data-keyboard="false" data-json="{{$item}}"><i class="material-icons text-danger">delete</i></a>
                                     </td>
 
                                 </tr>
@@ -65,7 +64,7 @@
         </div>
     </div>
     {{-- aqui los modals --}}
-    <pgdes-component url='{{url('planes/pgdes')}}' csrf='{!! csrf_field('POST') !!}'></pgdes-component>
+    <asignacion-formulario-component url='{{url('entidades/asignacionFormularios')}}' csrf='{!! csrf_field('POST') !!}'></asignacion-formulario-component>
     {{-- <indicadores-component url='{{url('action_short_term')}}' csrf='{!! csrf_field('POST') !!}' year="{{$year}}" :structures="{{$programmatic_structures}}"  ></indicadores-component> --}}
 
     <!-- Modal -->
@@ -96,23 +95,6 @@
 @section("script")
 
 $('#programatic_list').DataTable({
-                // responsive: {
-                //     details: {
-                //         renderer: function ( api, rowIdx, columns ) {
-                //             var data = $.map( columns, function ( col, i ) {
-                //                 return col.hidden ?
-                //                     '<tr data-dt-row="'+col.rowIndex+'" data-dt-column="'+col.columnIndex+'">'+
-                //                         '<td> <strong>'+col.title+':'+'</strong> </td> '+
-                //                         '<td>'+col.data+'</td>'+
-                //                     '</tr>' :
-                //                     '';
-                //             } ).join('');
-                //             return data ?
-                //                 $('<table/>').append( data ) :
-                //                 false;
-                //         }
-                //     }
-                // },
                 responsive: true,
                 language: spanish_lang
 

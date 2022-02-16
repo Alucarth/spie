@@ -30,23 +30,22 @@
                         <table id="programatic_list" class="table table-hover table-bordered dt-responsive nowrap" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Codigo</th>
-                                    <th>Denominacion</th>
-                                    <th>Plan</th>
-                                    <th>Estado</th>
-                                    <th>Acciones</th>
-
+                                    <th>Codigo PDES</th>
+                                    <th>Nombre Accion</th>
+                                    <th>Descripcion Accion</th>
+                                    <th>Presupuesto Total</th>
+                                    <th>Operacion</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($data as $item)
                                 <tr>
-                                    <td>{{$item->entidad->codigo}}</td>
-                                    <td>{{$item->entidad->descripcion}}</td>
-                                    <td>{{$item->formulario->sigla}}</td>
-                                    <td>{{$item->estado}}</td>
+                                    <td>{{$item->accion->resultado->meta->eje->codigo}}.{{$item->accion->resultado->meta->codigo}}.{{$item->accion->resultado->codigo}}.{{$item->accion->codigo}}</td>
+                                    <td>{{str_limit($item->accion->descripcion, $limit = 50, $end = '...')}}  </td>
+                                    <td>{{$item->descripcion_accion}}</td>
+                                    <td>{{$item->presupuesto_total}}</td>
                                     <td>
-                                        <a href="{{url('planificacion/planinstitucional/'.$item->id)}}"><i class="material-icons text-warning">folder</i></a>
+                                        <a href="{{url('plan_institucional/'.$item->accion_id)}}"><i class="material-icons text-warning">folder</i></a>
                                         {{-- <a href="#" data-toggle="modal" data-target="#ProgramaticModal" data-backdrop="static" data-keyboard="false" data-json="{{$item}}"><i class="material-icons text-primary">edit</i></a>
                                         <a href="#" data-toggle="modal" data-target="#deleteModal" data-backdrop="static" data-keyboard="false" data-json="{{$item}}"><i class="material-icons text-danger">delete</i></a> --}}
                                     </td>

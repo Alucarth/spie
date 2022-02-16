@@ -196,6 +196,7 @@
 
 
 				this.nuevaAccion = false;
+				this.selectedResultado=null;
 
 
 				var button = $(event.relatedTarget) // Button that triggered the modal

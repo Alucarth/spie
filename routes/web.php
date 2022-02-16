@@ -126,8 +126,9 @@ Route::get('planes/pdes/acciones/{resultado}','AccionController@index')->name('p
 
 
 Route::get('pdes/acciones/{filtro}','AccionController@getFiltro')->name('acciones.filtro');
-Route::resource('pdes/acciones','AccionController');
 Route::get('planificacion/planinstitucional/all','AccionController@getAll')->name('acciones.all');
+Route::resource('pdes/acciones','AccionController');
+
 
 
 
@@ -145,6 +146,13 @@ Route::resource('sectores','SectorController');
 Route::resource('plan_institucional','PlanInstitucionalController');
 
 Route::resource('tipoPlanIntitucional','TipoPlanInstitucionalController');
+
+Route::get('entidades/asignacionFormularios','EntidadController@asignacionFormularios')->name('entidades.asignacionFormularios');
+Route::post('entidades/asignacionFormularios','EntidadController@asignacionFormulariosStore')->name('entidades.asignacionFormulariosStore');
+
+
+Route::get('entidades/getAll','EntidadController@getAll')->name('entidades.getAll');
+Route::get('formularios/getAll','FormularioController@getAll')->name('formularios.getAll');
 
 
 });

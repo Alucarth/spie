@@ -9,6 +9,6 @@ class Resultado extends Model
     //
     public function meta()
     {
-        return $this->belongsTo('App\Resultado');
+        return $this->belongsTo('App\Meta');
     }
 }
