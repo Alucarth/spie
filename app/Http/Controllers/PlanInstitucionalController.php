@@ -53,10 +53,23 @@ class PlanInstitucionalController extends Controller
     {
         //donde el id es igual accion_id
         $plan_institucional = PlanInstitucional::where('accion_id',$id)->first();
-        $usuario_entidad = UserEntidad::where('user_id',Auth::user()->id)->first();
-        $formulario_endidad = FormularioEntidad::where('entidad_id',$usuario_entidad->entidad_id)->first();
-        $entidad = Entidad::find($formulario_endidad->entidad_id);
-        $formulario = Formulario::find($formulario_endidad->formulario_id);
+        $entidad = null;
+        $formulario_entidad = null;
+        $formulario = null;
+        if(Auth::user()->getEntidadId())
+        {
+            $entidad = Entidad::find(Auth::user()->getEntidadId());
+        }
+        if($entidad)
+        {
+            $formulario_entidad = FormularioEntidad::where('entidad_id',$entidad->id)->first();
+        }
+
+        if($formulario_entidad)
+        {
+            $formulario = Formulario::find($formulario_entidad->formulario_id);
+        }
+
 
         $title = "Plan Institucional";
         // return $plan_institucional;

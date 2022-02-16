@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-// use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Traits\HasRoles;
 class User extends Authenticatable
 {
@@ -35,6 +35,15 @@ class User extends Authenticatable
     public function userentidad()
     {
         return $this->belongsTo('App\UserEntidad');
+    }
+    public function getEntidadId()
+    {
+        $usuario_entidad = DB::table('user_entidades')->where('user_id',$this->id)->first();
+        if($usuario_entidad)
+        {
+            return $usuario_entidad->entidad_id;
+        }
+        return null;
     }
 
     // public function roles(){
