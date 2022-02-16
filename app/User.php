@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-// use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Traits\HasRoles;
 class User extends Authenticatable
 {
@@ -31,6 +31,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function getEntidadId()
+    {
+        $usuario_entidad = DB::table('user_entidades')->where('user_id',$this->id)->first();
+        if($usuario_entidad)
+        {
+            return $usuario_entidad->entidad_id;
+        }
+        return null;
+    }
 
     // public function roles(){
     //     return $this->belongsToMany('App\Rol', 'user_roles');
