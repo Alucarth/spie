@@ -42,7 +42,7 @@
                                 @foreach ($data as $item)
                                 <tr>
                                     <td>{{$item->entidad->codigo}}</td>
-                                    <td>{{$item->entidad->description}}</td>
+                                    <td>{{$item->entidad->descripcion}}</td>
                                     <td>{{$item->formulario->sigla}}</td>
                                     <td>{{$item->estado}}</td>
                                     <td>

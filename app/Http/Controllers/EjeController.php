@@ -16,9 +16,6 @@ class EjeController extends Controller
         $estructura = Eje::all();
         $niveles = [
             ["nombre" => "Ejes", "ruta" => 'pdes/ejes',"active"=> true],
-            // ["nombre" => "Metas", "ruta" => '#',"active"=> false],
-            // ["nombre" => "Resultados", "ruta" => '#',"active"=> false],
-            // ["nombre" => "Acciones", "ruta" => '#',"active"=> false]
         ];
         // return $programatic_structures;
         return view('planes.pdes.ejes',compact('estructura','niveles'));

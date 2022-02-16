@@ -38,7 +38,7 @@ class ResultadoController extends Controller
     public function getFiltro($filtro)
     {
         //
-        $resultados = Accion::where('meta_id',$filtro)->get();
+        $resultados = Resultado::where('meta_id',$filtro)->get();
         return response()->json($resultados);
     }
 

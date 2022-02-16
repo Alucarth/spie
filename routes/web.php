@@ -103,20 +103,29 @@ Route::get('planes/pdesNiveles/{nivel}','PdesStructureController@niveles')->name
 
 
 // Route::get('planes/pdes','EjeController@index')->name('pdes.ejes');
+
+Route::get('pdes/ejes/getAll','EjeController@getAll')->name('ejes.all');
 Route::resource('pdes/ejes','EjeController');
-Route::get('pdes/ejes/all','EjeController@getAll')->name('ejes.all');
+
+
 
 Route::get('planes/pdes/metas/{filtro}','MetaController@index')->name('pdes.meta');
-Route::resource('pdes/metas','MetaController');
 Route::get('pdes/metas/{filtro}','MetaController@getFiltro')->name('meta.filtro');
+Route::resource('pdes/metas','MetaController');
+
+
 
 
 
 Route::get('planes/pdes/resultados/{meta}','ResultadoController@index')->name('pdes.resultado');
-Route::resource('pdes/resultados','ResultadoController');
 Route::get('pdes/resultados/{filtro}','ResultadoController@getFiltro')->name('resultado.filtro');
+Route::resource('pdes/resultados','ResultadoController');
+
 
 Route::get('planes/pdes/acciones/{resultado}','AccionController@index')->name('pdes.accion');
+
+
+Route::get('pdes/acciones/{filtro}','AccionController@getFiltro')->name('acciones.filtro');
 Route::resource('pdes/acciones','AccionController');
 Route::get('planificacion/planinstitucional/all','AccionController@getAll')->name('acciones.all');
 
@@ -128,9 +137,12 @@ Route::resource('pdes/indicadores','IndicadorController');
 
 Route::get('planificacion','PlanificacionController@index')->name('planificacion.index');
 Route::get('planificacion/planinstitucional/{formularioEntidad}','PlanificacionController@planAcciones')->name('planificacion.acciones');
+Route::post('planificacion/planinstitucional','PlanificacionController@store')->name('planificacion.store');
 
 
+Route::resource('sectores','SectorController');
 
+Route::resource('tipoPlanIntitucional','TipoPlanInstitucionalController');
 
 
 });

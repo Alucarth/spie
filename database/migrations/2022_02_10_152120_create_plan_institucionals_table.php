@@ -20,8 +20,8 @@ class CreatePlanInstitucionalsTable extends Migration
             $table->string("descripcion_accion");
             $table->double("presupuesto_total");
 
-            $table->unsignedInteger('formulario_id');
-            $table->foreign('formulario_id')->references('id')->on('formularios');
+            $table->unsignedInteger('formulario_entidad_id');
+            $table->foreign('formulario_entidad_id')->references('id')->on('formulario_entidades');
 
             $table->unsignedInteger('accion_id');
             $table->foreign('accion_id')->references('id')->on('acciones');

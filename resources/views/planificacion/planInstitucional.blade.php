@@ -42,7 +42,7 @@
                                 @foreach ($data as $item)
                                 <tr>
                                     <td>{{$item->entidad->codigo}}</td>
-                                    <td>{{$item->entidad->denominacion}}</td>
+                                    <td>{{$item->entidad->descripcion}}</td>
                                     <td>{{$item->formulario->sigla}}</td>
                                     <td>{{$item->estado}}</td>
                                     <td>
@@ -65,7 +65,7 @@
         </div>
     </div>
     {{-- aqui los modals --}}
-    <plani-form-component url='{{url('planificacion/planinstitucional')}}' csrf='{!! csrf_field('POST') !!}'></plani-form-component>
+    <plani-form-component url='{{url('planificacion/planinstitucional')}}' csrf='{!! csrf_field('POST') !!}' entidad='{{ $entidadPlan->entidad_id}}' formulario='{{ $formularioSelectEntidad }}'></plani-form-component>
     {{-- <indicadores-component url='{{url('action_short_term')}}' csrf='{!! csrf_field('POST') !!}' year="{{$year}}" :structures="{{$programmatic_structures}}"  ></indicadores-component> --}}
 
     <!-- Modal -->

@@ -32,6 +32,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function userentidad()
+    {
+        return $this->belongsTo('App\UserEntidad');
+    }
+
     // public function roles(){
     //     return $this->belongsToMany('App\Rol', 'user_roles');
     // }

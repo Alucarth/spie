@@ -61,24 +61,25 @@ class EjeImport implements ToModel, WithHeadingRow
             }
 
         }
-        $coda = explode(".",trim($row['cod_acc']));
 
-        if($resultado->codigo == $coda[2])
-        {
-            $accion= Accion::where('descripcion','=',trim($row['desc_acc']))->first();
-            if(!$accion)
-            {
-                $accion = new Accion;
-                $accion->codigo = $coda[3];
-                $accion->descripcion = $row['desc_acc'];
-                $accion->resultado_id = $resultado->id;
-                $accion->user_id = 1;
-                $accion->tipo_accion_id =1;
-                $accion->save();
 
-            }
+        // $coda = explode(".",trim($row['cod_acc']));
+        // if($resultado->codigo == $coda[2])
+        // {
+        //     $accion= Accion::where('descripcion','=',trim($row['desc_acc']))->first();
+        //     if(!$accion)
+        //     {
+        //         $accion = new Accion;
+        //         $accion->codigo = $coda[3];
+        //         $accion->descripcion = $row['desc_acc'];
+        //         $accion->resultado_id = $resultado->id;
+        //         $accion->user_id = 1;
+        //         $accion->tipo_accion_id =1;
+        //         $accion->save();
 
-        }
+        //     }
+
+        // }
 
         // $codi = explode(".",trim($row['cod_acc']));
         // if($accion->codigo == $codi[3])
