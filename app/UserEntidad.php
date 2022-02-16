@@ -8,5 +8,4 @@ class UserEntidad extends Model
 {
     //
     protected $table ="user_entidades";
-
 }

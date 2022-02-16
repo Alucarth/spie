@@ -141,6 +141,8 @@ Route::post('planificacion/planinstitucional','PlanificacionController@store')->
 
 
 Route::resource('sectores','SectorController');
+// Route::get('formulario_matriz/{accion_id}','FormularioController@formulario_accion')->name('formulario_accion');
+Route::resource('plan_institucional','PlanInstitucionalController');
 
 Route::resource('tipoPlanIntitucional','TipoPlanInstitucionalController');
 
