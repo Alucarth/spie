@@ -88,4 +88,12 @@ class FormularioController extends Controller
     {
         //
     }
+
+
+    public function getAll()
+    {
+         //
+         $formularios = Formulario::all();
+         return response()->json($formularios);
+    }
 }

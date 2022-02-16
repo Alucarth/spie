@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 use App\User;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+
+use App\Entidad;
+use App\UserEntidad;
+
 class UserController extends Controller
 {
     /**
@@ -18,8 +22,9 @@ class UserController extends Controller
         //
         $usuarios = User::all();
         $roles = Role::all();
+        $entidades = Entidad::all()->pluck('descripcion', 'id');
         $title ='Usuarios';
-        return view('users.index',compact('usuarios','title','roles'));
+        return view('users.index',compact('usuarios','title','roles','entidades'));
     }
 
     /**
@@ -53,6 +58,16 @@ class UserController extends Controller
         }
 
         $user->save();
+
+
+        $userEntidad = new UserEntidad();
+        $userEntidad->user_id = $user->id;
+        $userEntidad->entidad_id = $request->entidad_id;
+        $userEntidad->save();
+
+
+
+
         // $user->roles()->sync([$request->rol_id]);
         $user->assignRole($request->roles);
         session()->flash('message','Se creo al usuario'.$user->username);

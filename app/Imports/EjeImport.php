@@ -61,8 +61,9 @@ class EjeImport implements ToModel, WithHeadingRow
             }
 
         }
-        $coda = explode(".",trim($row['cod_acc']));
 
+
+        $coda = explode(".",trim($row['cod_acc']));
         if($resultado->codigo == $coda[2])
         {
             $accion= Accion::where('descripcion','=',trim($row['desc_acc']))->first();

@@ -123,6 +123,8 @@ Vue.component('pdes-form-component', require('./components/PdesForm.vue').defaul
 Vue.component('indicador-form-component', require('./components/IndicadorForm.vue').default);
 Vue.component('plani-form-component', require('./components/PlaniForm.vue').default);
 
+Vue.component('plan-institucional', require('./components/PlanInstitucional.vue').default);
+Vue.component('asignacion-formulario-component', require('./components/AsignacionFormulario.vue').default);
 Vue.component('plan-component', require('./components/PlanInstitucional.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to

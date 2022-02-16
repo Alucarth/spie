@@ -32,6 +32,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function userentidad()
+    {
+        return $this->belongsTo('App\UserEntidad');
+    }
     public function getEntidadId()
     {
         $usuario_entidad = DB::table('user_entidades')->where('user_id',$this->id)->first();

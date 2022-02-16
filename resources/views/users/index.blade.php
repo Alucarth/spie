@@ -102,6 +102,12 @@
                             {{-- {!! Form::select('rol_id', $roles,null,['class'=>'custom-select'])!!} --}}
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="form-group  col-md-6">
+                            {!! Form::label('rol', 'Roles')!!}
+                            {!! Form::select('entidad_id', $entidades,null,['class'=>'custom-select select2'])!!}
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>

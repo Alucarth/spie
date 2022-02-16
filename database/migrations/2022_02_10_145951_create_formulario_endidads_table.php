@@ -34,6 +34,6 @@ class CreateFormularioEndidadsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('formulario_endidades');
+        Schema::dropIfExists('formulario_entidades');
     }
 }
